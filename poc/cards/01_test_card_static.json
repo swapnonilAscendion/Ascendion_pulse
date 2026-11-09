@@ -1,0 +1,250 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Ascendion Pulse",
+      "weight": "Bolder",
+      "size": "Medium",
+      "color": "Accent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Two quick questions - under 30 seconds. Your answers are stored without your name, and results are only shown for groups of 8 or more.",
+      "wrap": true,
+      "isSubtle": true,
+      "size": "Small"
+    },
+    {
+      "type": "TextBlock",
+      "text": "1. How manageable has your workload been this week?",
+      "wrap": true,
+      "weight": "Bolder",
+      "spacing": "Medium"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.ShowCard",
+          "title": "😀 Manageable",
+          "card": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "TextBlock",
+                "text": "2. How supported do you feel by your manager? (1 = not at all, 5 = fully)",
+                "wrap": true,
+                "weight": "Bolder"
+              },
+              {
+                "type": "Input.ChoiceSet",
+                "id": "q2_good",
+                "style": "expanded",
+                "isRequired": true,
+                "errorMessage": "Please pick a rating.",
+                "choices": [
+                  {
+                    "title": "1",
+                    "value": "1"
+                  },
+                  {
+                    "title": "2",
+                    "value": "2"
+                  },
+                  {
+                    "title": "3",
+                    "value": "3"
+                  },
+                  {
+                    "title": "4",
+                    "value": "4"
+                  },
+                  {
+                    "title": "5",
+                    "value": "5"
+                  }
+                ]
+              },
+              {
+                "type": "Input.Toggle",
+                "id": "hr_good",
+                "title": "I'd like someone from HR to contact me (this shares my name with HR, not my answers).",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": "false",
+                "wrap": true
+              }
+            ],
+            "actions": [
+              {
+                "type": "Action.Submit",
+                "id": "submit_good",
+                "title": "Submit",
+                "data": {
+                  "action": "submit",
+                  "q1": "Manageable"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Action.ShowCard",
+          "title": "😐 Sometimes heavy",
+          "card": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "TextBlock",
+                "text": "2. How supported do you feel by your manager? (1 = not at all, 5 = fully)",
+                "wrap": true,
+                "weight": "Bolder"
+              },
+              {
+                "type": "Input.ChoiceSet",
+                "id": "q2_mid",
+                "style": "expanded",
+                "isRequired": true,
+                "errorMessage": "Please pick a rating.",
+                "choices": [
+                  {
+                    "title": "1",
+                    "value": "1"
+                  },
+                  {
+                    "title": "2",
+                    "value": "2"
+                  },
+                  {
+                    "title": "3",
+                    "value": "3"
+                  },
+                  {
+                    "title": "4",
+                    "value": "4"
+                  },
+                  {
+                    "title": "5",
+                    "value": "5"
+                  }
+                ]
+              },
+              {
+                "type": "Input.Toggle",
+                "id": "hr_mid",
+                "title": "I'd like someone from HR to contact me (this shares my name with HR, not my answers).",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": "false",
+                "wrap": true
+              }
+            ],
+            "actions": [
+              {
+                "type": "Action.Submit",
+                "id": "submit_mid",
+                "title": "Submit",
+                "data": {
+                  "action": "submit",
+                  "q1": "Sometimes heavy"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Action.ShowCard",
+          "title": "😟 Overwhelming",
+          "card": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "TextBlock",
+                "text": "Sorry to hear that. What is adding most to your workload? (optional)",
+                "wrap": true,
+                "weight": "Bolder"
+              },
+              {
+                "type": "Input.Text",
+                "id": "fu_bad",
+                "isMultiline": true,
+                "maxLength": 500,
+                "placeholder": "Please don't include names or personal details."
+              },
+              {
+                "type": "TextBlock",
+                "text": "2. How supported do you feel by your manager? (1 = not at all, 5 = fully)",
+                "wrap": true,
+                "weight": "Bolder",
+                "spacing": "Medium"
+              },
+              {
+                "type": "Input.ChoiceSet",
+                "id": "q2_bad",
+                "style": "expanded",
+                "isRequired": true,
+                "errorMessage": "Please pick a rating.",
+                "choices": [
+                  {
+                    "title": "1",
+                    "value": "1"
+                  },
+                  {
+                    "title": "2",
+                    "value": "2"
+                  },
+                  {
+                    "title": "3",
+                    "value": "3"
+                  },
+                  {
+                    "title": "4",
+                    "value": "4"
+                  },
+                  {
+                    "title": "5",
+                    "value": "5"
+                  }
+                ]
+              },
+              {
+                "type": "Input.Toggle",
+                "id": "hr_bad",
+                "title": "I'd like someone from HR to contact me (this shares my name with HR, not my answers).",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": "false",
+                "wrap": true
+              }
+            ],
+            "actions": [
+              {
+                "type": "Action.Submit",
+                "id": "submit_bad",
+                "title": "Submit",
+                "data": {
+                  "action": "submit",
+                  "q1": "Overwhelming"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "id": "skip",
+      "title": "Skip this time",
+      "associatedInputs": "none",
+      "data": {
+        "action": "skip"
+      }
+    }
+  ]
+}
