@@ -1,9 +1,17 @@
-@"Daily stand up _ Listening Organization Project .docx" 
+Swapnonil – Today's plan (9 Nov)
 
-this is the stand up transcript for today
+1. Rules Manager – Power Apps screen (rule creation)
 
-your job will be to find out my tasks,from where i am mentioned,and then summarize the tasks in bullet points such that i can post that in the teams channel
+Build a screen where HR describes a rule in plain English, e.g. "For January, pick all Role Clarity & Meaningful Work questions and send them to all employees."
+AI turns the statement into a SQL query. For now the SQL only uses the Question Bank, Rules and Launch Log tables.
+Validate the generated SQL and show its real output (which employees get which questions), so HR can check it.
+Let HR send a test card to their own Teams ID before approving.
+Store each rule's SQL in the Rules table with a status: Draft → Tested → Approved. HR can keep several drafts. Ajay's flow will pick up and run only Approved rules.
+2. Research – best AI option for English-to-SQL
 
-my name is swapnonil and my task mostly will be around the power apps today,where the user can create a rule from the ui,they will put simple english language and then there will be ai to read that and generate and review the sql query which will insert data in the database according to what table we have,we also have to do research on which ai model will be best for this job
+Compare Copilot Studio, Azure AI Language and Azure OpenAI, plus any open-source NL-to-SQL / ML library.
+Judge each on accuracy against our schema, cost/licensing, and how well it fits Power Apps and Power Automate.
+Share a recommendation.
+3. Teams cards (carried over)
 
-you just analyse the transcript and then come up with  the bullet points,later we will dive deep on how we can go about this
+Card sending works with static content. Once the Power Automate Premium licence arrives (expected Wed), I'll connect to the DB and send cards built from the assignment table.
