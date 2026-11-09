@@ -1,0 +1,9 @@
+@"Daily stand up _ Listening Organization Project .docx" 
+
+this is the stand up transcript for today
+
+your job will be to find out my tasks,from where i am mentioned,and then summarize the tasks in bullet points such that i can post that in the teams channel
+
+my name is swapnonil and my task mostly will be around the power apps today,where the user can create a rule from the ui,they will put simple english language and then there will be ai to read that and generate and review the sql query which will insert data in the database according to what table we have,we also have to do research on which ai model will be best for this job
+
+you just analyse the transcript and then come up with  the bullet points,later we will dive deep on how we can go about this
