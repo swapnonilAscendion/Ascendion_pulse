@@ -1,0 +1,46 @@
+{
+  "reference_date": "2026-11-09",
+  "notes": "Expected results use physical column names from schema_config. If a column is renamed, update the 'attribute' values here too. Add cases freely; the score is the share of cases matched exactly.",
+  "cases": [
+    {
+      "text": "For the month of January, pick all the Role Clarity & Meaningful Work questions and send them to all employees.",
+      "expected": {"themes": ["Role Clarity & Meaningful Work"], "conditions": [], "effective_from": "2027-01-01", "effective_to": "2027-01-31"}
+    },
+    {
+      "text": "In November send the Culture & Inclusion questions to everyone.",
+      "expected": {"themes": ["Culture & Inclusion"], "conditions": [], "effective_from": "2026-11-01", "effective_to": "2026-11-30"}
+    },
+    {
+      "text": "Send the workload and wellbeing questions to G5 employees in December.",
+      "expected": {"themes": ["Workload & Wellbeing"], "conditions": [["Grade", "=", "G5"]], "effective_from": "2026-12-01", "effective_to": "2026-12-31"}
+    },
+    {
+      "text": "Career Development questions for G6 and above in the Technology business unit for February.",
+      "expected": {"themes": ["Career Development"], "conditions": [["Grade", ">=", "G6"], ["BusinessUnit", "=", "Technology"]], "effective_from": "2027-02-01", "effective_to": "2027-02-28"}
+    },
+    {
+      "text": "Leadership & Trust questions to employees in Chennai and Pune during March.",
+      "expected": {"themes": ["Leadership & Trust"], "conditions": [["Location", "IN", "Chennai, Pune"]], "effective_from": "2027-03-01", "effective_to": "2027-03-31"}
+    },
+    {
+      "text": "Send Recognition questions to all permanent employees except those in Hyderabad.",
+      "expected": {"themes": ["Recognition"], "conditions": [["EmploymentType", "=", "Permanent"], ["Location", "!=", "Hyderabad"]], "effective_from": null, "effective_to": null}
+    },
+    {
+      "text": "Innovation and AI readiness questions for the Data department, grades below G7, in October.",
+      "expected": {"themes": ["Innovation & AI Readiness"], "conditions": [["Department", "=", "Data"], ["Grade", "<", "G7"]], "effective_from": "2027-10-01", "effective_to": "2027-10-31"}
+    },
+    {
+      "text": "Manager Effectiveness questions to contract staff in Bengaluru in April.",
+      "expected": {"themes": ["Manager Effectiveness"], "conditions": [["EmploymentType", "=", "Contract"], ["Location", "=", "Bengaluru"]], "effective_from": "2027-04-01", "effective_to": "2027-04-30"}
+    },
+    {
+      "text": "For May, send questions to the Finance team.",
+      "expected": {"needs_clarification": true}
+    },
+    {
+      "text": "Send the Collaboration and Communication & Change questions to the Sales business unit in June.",
+      "expected": {"themes": ["Collaboration", "Communication & Change"], "conditions": [["BusinessUnit", "=", "Sales"]], "effective_from": "2027-06-01", "effective_to": "2027-06-30"}
+    }
+  ]
+}
